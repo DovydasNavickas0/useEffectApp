@@ -22,7 +22,7 @@ function ProductList() {
     console.log(products)
 
     return (
-      <div>
+      <div className={styles.ProductList}>
         <OneProduct items={products}/>
       </div>
     );

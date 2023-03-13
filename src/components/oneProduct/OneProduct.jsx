@@ -12,11 +12,13 @@ function OneProduct(props) {
         props.items.map(item => {
             return(
                 <div key={item.id} className={styles.oneProduct}>
-                    <h2>{item.title}</h2>
-                    <h3>{item.category}</h3>
-                    <img src={item.image}></img>
-                    <p>{item.description}</p>
-                    <p>{item.price}</p>
+                    <div className={styles.info}>
+                        <h2 className={styles.title}>{item.title}</h2>
+                        <h3 className={styles.category}>{item.category}</h3>
+                        <h3 className={styles.price}>{item.price}$</h3>
+                        <img src={item.image} alt="productImg"></img>
+                    </div>
+                    <p className={styles.description}>{item.description}</p>
                 </div>
             )
         })
